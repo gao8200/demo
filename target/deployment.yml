@@ -13,7 +13,7 @@ spec:
         app: kube-toolchain-demo
     spec:
       containers:
-      - name:
+      - name: kube-toolchain-demo
         image:
         imagePullPolicy: IfNotPresent
         ports:
