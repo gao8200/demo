@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ube-toolchain-demo
+        app: kube-toolchain-demo
     spec:
       containers:
       - name: kube-toolchain-demo
