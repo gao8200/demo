@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:
+  name: kube-toolchain-demo
 spec:
-  replicas:
+  replicas: 1
   selector:
     matchLabels:
-      app:
+      app: kube-toolchain-demo
   template:
     metadata:
       labels:
-        app:
+        app: ube-toolchain-demo
     spec:
       containers:
-      - name:
+      - name: kube-toolchain-demo
         image:
         imagePullPolicy: IfNotPresent
         ports:
