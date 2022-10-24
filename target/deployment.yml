@@ -1,12 +1,20 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: kube-toolchain-demo
-  labels:
-    app: kube-toolchain-demo
 spec:
-  type: NodePort
-  ports:
-  - port: 8080
+  replicas: 1
   selector:
-    app: kube-toolchain-demo
+    matchLabels:
+      app: kube-toolchain-demo
+  template:
+    metadata:
+      labels:
+        app: kube-toolchain-demo
+    spec:
+      containers:
+      - name:
+        image:
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
